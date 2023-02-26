@@ -6,7 +6,6 @@ class BaseStorage(AbstractStorages):
     def __init__(self, items: dict, capacity: int = 100):
         self.__items = items
         self.__capacity = capacity
-        super().__init__(items, capacity)
 
     def add(self, name: str, amount: int) -> bool:
         if self.get_unique_items_count() >= 5:
